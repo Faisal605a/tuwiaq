@@ -1,0 +1,60 @@
+<!-- <a   class="h-6 w-4"
+routerLinkActive="active" [routerLink]="[courseId]" >
+    <div class="justify-start">
+        <h4 class="text-base">
+            {{currentCourse.name}}</h4>
+        <p class="text-sm">
+             {{currentCourse.instructor}}</p>
+             <p class="text-sm">
+              {{currentCourse.place}}</p>
+              <p class="text-sm">
+                {{currentCourse.time}}</p>
+                <p class="text-sm">
+                  {{currentCourse.telegram}}</p>
+                  <p class="text-sm">
+                    {{currentCourse.}whatsapp}</p>
+                    <p class="text-sm">
+                      {{currentCourse.gitHub}}</p>
+    </div>
+    <span class="place-items-start">
+        <img src="{{ currentCourse.image }}"
+        alt="{{currentCourse.name}} pic"
+         class="max-h-12" >
+    </span>
+</a> -->
+
+<div class="flex max-h-28 max-w-xs items-start">
+  <a routerLinkActive="active" routerLink="{{ courseId }}/detiles">
+    <div
+      style="background-color: rgb(57, 91, 100, 0.7); width: 400px"
+      class="justify-between bg-opacity-60 p-3 container max-h-28 h-28 max-w-md rounded flex"
+    >
+      <div class="mr-3 container max-h-32 w-64 flex-wrap flex">
+        <p class="font-bold text-2xl h-10 overflow-x-auto break-words max-h-22 font-sans">{{ currentCourse.name }}</p>
+
+        <p
+          class="font-sans break-words overflow-y-scroll
+           h-12 text-base m-3 max-h-11"
+          style="color: #fafbfc"
+        >
+          {{ currentCourse.description }}
+        </p>
+      </div>
+
+      <div class="flex container flex-wrap h-16 w-16">
+        <img
+          class="max-h-14 h-12 rounded"
+          [src]="currentCourse.image"
+          alt="{{ currentCourse.name }}"
+        />
+        <a class=" " routerLinkActive="active" routerLink="{{ courseId }}">
+          <img
+            class="max-h-8 rounded ml-7 my-4"
+            src="assets/icons/icons8-edit-24.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+  </a>
+</div>

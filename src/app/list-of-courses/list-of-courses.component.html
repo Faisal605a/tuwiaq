@@ -1,0 +1,25 @@
+<div class="grid mx-auto my-2 gap-4 w-1/4">
+  <button
+    (click)="OnNewCourse()"
+    style="background-color: rgb(148, 180, 159)"
+    class="justify-center rounded h-auto w-auto"
+  >
+    <img
+      class="max-w-xs max-h-5 mx-3 inline"
+      src="assets/icons/plus-solid.svg"
+      alt=""
+    />
+    New Course
+  </button>
+</div>
+
+<hr class="bg-black h-1 w-2/3 mb-4 mx-auto" />
+
+<div class="flex  p-3 rounded flex-wrap  mx-auto justify-center max-w-5xl h-auto  gap-12 container">
+  <div
+    class="twoEDiv "
+    *ngFor="let rec of Courses; let i = index"
+  >
+    <app-course-item [courseId]="i" [currentCourse]="rec"></app-course-item>
+  </div>
+</div>

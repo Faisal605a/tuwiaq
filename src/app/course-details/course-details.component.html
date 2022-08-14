@@ -1,0 +1,117 @@
+<!-- <div class="justify-start">
+        <h4 class="text-base">
+            {{currentCourse.name}}</h4>
+        <p class="text-sm">
+             {{currentCourse.instructor}}</p>
+             <p class="text-sm">
+              {{currentCourse.place}}</p>
+              <p class="text-sm">
+                {{currentCourse.time}}</p>
+                <p class="text-sm">
+                  {{currentCourse.telegram}}</p>
+                  <p class="text-sm">
+                    {{currentCourse.}whatsapp}</p>
+                    <p class="text-sm">
+                      {{currentCourse.gitHub}}</p>
+    </div>
+    <span class="place-items-start">
+        <img src="{{ currentCourse.image }}"
+        alt="{{currentCourse.name}} pic"
+         class="max-h-12" >
+    </span> -->
+<div class="justify-start"></div>
+
+<div class="flex m-3 items-center">
+  <div
+    class="bg-black bg-opacity-50 mx-auto p-3 container h-auto max-w-5xl rounded flex"
+  >
+    <button>
+      <img
+        routerLink="//"
+        class="max-w-xs max-h-10 border-stone-700"
+        src="assets/icons/icons8-back-64.png"
+        alt=""
+      />
+    </button>
+    <div class="grid">
+      <div class="flex mr-3 container">
+        <div class="grid gap-2">
+          <div class="flex">
+            <label for="name" class="editLabels">Name: </label>
+            <ul class="textDetiles">
+              {{
+                currentCourse.name
+              }}
+            </ul>
+          </div>
+
+          <div class="flex">
+            <label for="instructor" class="editLabels">instructor: </label>
+
+            <ul class="textDetiles">
+              {{
+                currentCourse.instructor
+              }}
+            </ul>
+          </div>
+
+          <div class="flex">
+            <label for="date" class="editLabels">Date: </label>
+            <ul class="textDetiles">
+              {{
+                currentCourse.date
+              }}
+            </ul>
+          </div>
+        </div>
+
+        <div class="h-40 bg-black/50 border-solid w-px mx-4"></div>
+
+        <div class="grid gap-1 mx-3">
+          <div class="flex">
+            <label for="Telgeram" class="editLabels">Telgeram: </label>
+            <ul class="inline">
+              <a class="textDetiles" routerLink="{{ currentCourse.telegram }}"
+                >{{ currentCourse.telegram }}
+              </a>
+            </ul>
+          </div>
+
+          <div class="flex">
+            <label for="GitHub" class="editLabels">GitHub: </label>
+            <ul class="inline">
+              <a class="textDetiles" href="{{ currentCourse.gitHub }}"
+                >{{ currentCourse.gitHub }}
+              </a>
+            </ul>
+          </div>
+
+          <div class="flex">
+            <label for="whatsapp" class="editLabels">whatsapp: </label>
+            <ul class="inline">
+              <a class="textDetiles" href="{{ currentCourse.whatsapp }}">
+                {{ currentCourse.whatsapp }}
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="flex container justify-center max-h-14 max-w-xs">
+            <img
+              class="max-h-14 rounded"
+              [src]="currentCourse.image"
+              alt="{{ currentCourse.name }}"
+            />
+          </div>
+
+          <p
+            class="text-sm textDetiles max-h-18 overflow-y-scroll text-slate-100"
+          >
+            {{ currentCourse.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

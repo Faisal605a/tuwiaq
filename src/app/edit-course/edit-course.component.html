@@ -1,0 +1,188 @@
+<div
+  style="background-color: rgb(57, 91, 100)"
+  class="flex flex-wrap container mx-auto max-w-lg h-auto rounded my-6 p-3"
+>
+  <form class="w-auto" [formGroup]="courseF" (ngSubmit)="onSubmit()">
+    <div class="twoEDiv">
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img
+            class="max-w-xs max-h-6"
+            src="assets/icons/book-alt.png"
+            alt=""
+          />
+          <label for="name" class="editLabels">Name</label>
+        </div>
+        <input type="text" id="name" formControlName="name" class="editInput" />
+      </div>
+
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img class="max-w-xs max-h-6" src="assets/icons/clock.png" alt="" />
+          <label for="date" class="editLabels">Date</label>
+        </div>
+        <input type="date" id="date" formControlName="date" class="editInput" />
+      </div>
+    </div>
+
+    <div class="twoEDiv">
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img class="max-w-xs max-h-6" src="assets/icons/clock.png" alt="" />
+          <label for="time" class="editLabels">Time</label>
+        </div>
+        <input
+          type="datetime"
+          id="time"
+          formControlName="time"
+          class="editInput"
+        />
+      </div>
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img class="max-w-xs max-h-6" src="assets/icons/user.png" alt="" />
+          <label for="instructor" class="editLabels">Instructor</label>
+        </div>
+        <input
+          type="text"
+          id="instructor"
+          formControlName="instructor"
+          class="editInput"
+        />
+      </div>
+    </div>
+
+    <div class="twoEDiv">
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img class="max-w-xs max-h-6" src="assets/icons/marker.png" alt="" />
+          <label for="place" class="editLabels">Location</label>
+        </div>
+        <input
+          type="text"
+          id="place"
+          formControlName="place"
+          class="editInput"
+        />
+      </div>
+
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img
+            class="max-w-xs max-h-6"
+            src="assets/icons/whatsapp.png"
+            alt=""
+          />
+          <label for="whatsapp" class="editLabels"> Whatsapp group</label>
+        </div>
+        <input
+          type="text"
+          id="whatsapp"
+          formControlName="whatsapp"
+          class="editInput"
+        />
+      </div>
+    </div>
+
+    <div class="twoEDiv">
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img
+            class="max-w-xs max-h-6"
+            src="assets/icons/interface.png"
+            alt=""
+          />
+          <label for="name" class="editLabels">Telegram group</label>
+        </div>
+        <input
+          type="text"
+          id="telegram"
+          formControlName="telegram"
+          class="editInput"
+        />
+      </div>
+
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img
+            class="max-w-xs max-h-6"
+            src="assets/icons/github-brands.svg"
+            alt=""
+          />
+          <label for="name" class="editLabels">gitHub URL</label>
+        </div>
+        <input
+          type="text"
+          id="gitHub"
+          formControlName="gitHub"
+          class="editInput"
+        />
+      </div>
+    </div>
+
+    <div class="twoEDiv">
+      <div class="grid ml-5 m-1">
+        <div class="flex m-1 mb-1.5">
+          <img
+            class="max-w-xs max-h-6"
+            src="assets/icons/image-solid.svg"
+            alt=""
+          />
+          <label for="imagePath" class="editLabels">Image URL</label>
+        </div>
+
+        <input
+          type="text"
+          id="image"
+          formControlName="image"
+          class="editInput"
+          #imagePath
+        />
+      </div>
+      <!-- <div class="grid ml-5 justify-center items-center mx-auto m-1">
+        <img [src]="imagePath.value" class="max-w-xs mx-auto max-h-20" />
+      </div> -->
+    </div>
+
+    <div class="grid my-2 gap">
+      <div class="flex ml-7 m-1 mb-2">
+        <img
+          class="max-w-xs max-h-6"
+          src="assets/icons/comment-alt.png"
+          alt=""
+        />
+        <label for="description" class="editLabels">Description:</label>
+      </div>
+
+      <textarea
+        type="text"
+        id="description"
+        formControlName="description"
+        class="mx-7"
+        rows="6"
+      ></textarea>
+    </div>
+
+    <div class="flex my-7 mx-auto flex-wrap">
+      <button
+        type="submit"
+        style="background-color: rgb(148, 180, 159)"
+        class="h-auto p-2 border-black container w-auto mx-auto rounded"
+      >
+        <img
+          class="max-h-10 h-6 max-w-xs"
+          src="assets/icons/floppy-disk-regular.svg"
+          alt=""
+        />
+      </button>
+
+      <button
+        type="button"
+        (click)="onFinsh()"
+        class="border-black container border p-2 h-auto w-auto mx-auto rounded"
+      >
+        <img class="max-h-6 max-w-xs" src="assets/icons/cross.png" alt="" />
+      </button>
+    </div>
+  </form>
+</div>
